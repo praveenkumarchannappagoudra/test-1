@@ -1,27 +1,27 @@
-pipeline {
+pipeline{
     agent any
-    
     tools {
-        jdk 'JDK11'
+        jdk 'java-11'
         maven 'Maven'
     }
-    stages {
-        stage('git checkout'){
-            steps{
-                git branch: 'main', url: 'https://github.com/praveenkumarchannappagoudra/test-1.git'
+
+    stages{
+        stage('Git checkout') {
+            steps {
+                    git branch: 'main', url: 'https://github.com/ManojKRISHNAPPA/test-1.git'
             }
         }
-        stage('compile'){
-            steps{
-                sh "mven compile"
-            }
+        stage('Compile') {
+            steps {
+                    sh 'mvn compile'
+            }         
         }
-        stage('build'){
-            steps{
-                sh "mvn clean install"
+        stage('Build'){
+            steps {
+                    sh 'mvn clean install'
             }
         }
     }
 
-    }
+}
 
