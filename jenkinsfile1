@@ -44,12 +44,10 @@ pipeline{
                 }
             }
         }
-
-        stage('Pushing images to repository') {
-            steps {
+        stage('pushing to docker repository'){
+            steps{
                 sh 'docker push praveenkumarchannappagoudra/project:1'
             }
-            
         }
     }
 
