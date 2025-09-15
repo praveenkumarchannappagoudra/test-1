@@ -1,13 +1,11 @@
 pipeline{
     agent any
-
     tools {
-        jdk 'JDK11'
+        jdk 'java-11'
         maven 'Maven'
     }
-
     stages{
-        stage('Git checkout') {
+        stage('git checkout') {
             steps {
                     git branch: 'main', url: 'https://github.com/praveenkumarchannappagoudra/test-1.git'
             }
