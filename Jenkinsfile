@@ -47,7 +47,6 @@ pipeline{
             steps {
                 sh 'docker push praveenkumarchannappagoudra/project:1'
             }
-            
         }
     }
 }
